@@ -1,0 +1,33 @@
+Proyecto de Base de datos con PHP
+Pasos para desarrollo
+1.- Crear una base de datos - Mysql.
+	1.1.- Crar una tabla con los campos:
+		- Matricula <AI> 
+		- Nombre 
+		- Telefono
+		- Correo 
+	      tabla de personal
+
+	1.2.- Registrar un par de datos
+	nota: INSERT INTO "Personal" (`Matricula`, `Nombre`, `Telefono`, `Correo`)
+	VALUES: (NULL, 'Miguel Angel Castro Martinez', '2381458453', 'bgcrangel2001@gmail.com')	
+		(NULL, 'Paulina Mendiola Ortega', '2781163677', 'pau123@gmail.com');
+		(NULL, 'Humberto Zarate Contreras', '2381818367', 'zarateh@gmail.com');
+
+2.- Crear mi proyecto
+	2.1.- Creamos un archivo llamado conexion.php y establecemos el script de conexion
+	<?php
+    	    $Servidor = "localhost";
+	    $Usuario = "root";
+	    $Contraseña = "";
+	    $Basedatos = "unidad3";
+
+	    //Conexion
+	    $conn = mysqli_connect($Servidor,$Usuario,$Contraseña,$Basedatos);
+
+	    //Test Conexion
+	    if(!$conn){
+		echo "No se pudo establecer la conexión a la Base de Datos";
+    	    }
+	?>
+	2.2.- Crear un archivo index de interface <<Mostrar los datos de mi base>>
